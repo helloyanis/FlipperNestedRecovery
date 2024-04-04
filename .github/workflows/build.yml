@@ -28,7 +28,7 @@ jobs:
       - name: Set up pthreads
         if: runner.os == 'Windows'
         run: |
-          curl -O http://sourceware.org/pub/pthreads-win32/pthreads-w32-2-9-1-release.zip
+          curl -O https://sourceware.org/pub/pthreads-win32/pthreads-w32-2-9-1-release.zip
           7z x -y pthreads-w32-2-9-1-release.zip -opthreads
           robocopy pthreads\Pre-built.2\dll\x64 build\pthreads /COPYALL /E || true
           robocopy pthreads\Pre-built.2\include build\pthreads /COPYALL /E || true
